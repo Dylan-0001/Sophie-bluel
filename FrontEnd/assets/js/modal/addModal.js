@@ -2,7 +2,7 @@ import { ModalComponent } from "../util/modal.js";
 import { RequestUtils } from "../util/requestUtils.js";
 import { Utils } from "../util/utils.js";
 
-var list = [];
+let list = [];
 RequestUtils.getCategories()
     .then(response => list = response)
     .catch((error) => console.error("Erreur de chargement :", error));

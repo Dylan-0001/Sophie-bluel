@@ -1,6 +1,6 @@
-var galleryImages = [];
-var imageSelected = null;
-var categorieIdActive = null;
+let galleryImages = [];
+let imageSelected = null;
+let categorieIdActive = null;
 
 export class Utils 
 {
