@@ -22,11 +22,10 @@ loginButton.addEventListener("click", () =>{
     if(Utils.isAuthenticated())
     {
         localStorage.removeItem("token");
-        window.location.href = 'http://127.0.0.1:5500/FrontEnd/';
+        window.location.href = 'http://127.0.0.1:5500/';
     }
     else
     {
-        window.location.href = 'http://127.0.0.1:5500/FrontEnd/page/auth.html';
+        window.location.href = 'http://127.0.0.1:5500/page/auth.html';
     }
-
 });

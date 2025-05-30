@@ -5,7 +5,7 @@ import { Utils } from './util/utils.js';
 //Protection already auth
 if(Utils.isAuthenticated())
 {
-    window.location.href = 'http://127.0.0.1:5500/FrontEnd/';
+    window.location.href = 'http://127.0.0.1:5500/';
 }
 
 //Form action Listener
@@ -57,5 +57,5 @@ async function authAction(response)
     const data = await response.json();
     localStorage.setItem("token", data.token);
 
-    window.location.href = 'http://127.0.0.1:5500/FrontEnd/';
+    window.location.href = 'http://127.0.0.1:5500/';
 }

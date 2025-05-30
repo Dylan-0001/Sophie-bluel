@@ -22,19 +22,22 @@ RequestUtils.getCategories()
 //Function Draw Filters
 function drawFilters(filters)
 {
+
+    if(Utils.isAuthenticated()) return;
+    
     const filtersDiv = document.querySelector(".filters");
     filters.unshift({name: "Tous", id: 0})
 
     filters.forEach((filterObj) =>{
-
         const button = document.createElement("button");
         button.textContent = filterObj.name;
         button.classList.add("filter");
 
         filtersDiv.appendChild(button);
-        
+            
         initializeListener(button, filterObj);
     });
+   
 }
 
 //Initialize Filter Listener
