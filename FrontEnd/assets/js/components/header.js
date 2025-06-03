@@ -9,11 +9,12 @@ const editBar = document.getElementById("edition-mod");
 
 //Change text to login/logout button & add edit bar info
 loginButton.textContent = "login";
-if(editBar) {editBar.style.display = "none";}
+editBar.style.display = "none";
+
 if(Utils.isAuthenticated())
 {
     loginButton.textContent = "logout";
-    if(editBar) {editBar.style.display = "flex";}
+    editBar.style.display = "flex";
 }
 
 //Function for change login/logout click action

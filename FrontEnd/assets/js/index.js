@@ -6,6 +6,11 @@ import { EditModal } from './modal/editModal.js';
 //Variables
 const edit = document.getElementById("modifie-button");
 
+//Call DrawFilters Function
+RequestUtils.getCategories()
+    .then(drawFilters)
+    .catch((error) => console.error("Erreur de chargement :", error));
+
 //Call DrawWorkImages Function
 RequestUtils.getWorks()
     .then(response => {
@@ -14,10 +19,6 @@ RequestUtils.getWorks()
         Utils.drawWorkImages();
     }).catch((error) => console.error("Erreur de chargement :", error));
 
-//Call DrawFilters Function
-RequestUtils.getCategories()
-    .then(drawFilters)
-    .catch((error) => console.error("Erreur de chargement :", error));
 
 //Function Draw Filters
 function drawFilters(filters)
@@ -37,7 +38,6 @@ function drawFilters(filters)
             
         initializeListener(button, filterObj);
     });
-   
 }
 
 //Initialize Filter Listener
