@@ -53,7 +53,7 @@ export class Utils
         errorMsg,
         container,
         allowedTypes = ['image/png', 'image/jpeg'],
-        maxSizeMB = 2,
+        maxSizeMB = 4,
         buttonText = "Choisir une image"
       } = {}) {
         const button = document.createElement('button');
